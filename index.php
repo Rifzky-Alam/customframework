@@ -1,8 +1,6 @@
 <?php 
 include_once 'config/Mastercfg.php';
-include_once Mastercfg::$homedir.'entities/shipper/Shipper.php';
+include_once Mastercfg::$homedir.'controller/homepage.controller.php';
+$homepage = Homepagectr::getInstanceOfHomepagectr();
 
-
-$data = Shipper::getInstance();
-echo $data->Tes();
-?>
+$homepage->IndexHomepage();
